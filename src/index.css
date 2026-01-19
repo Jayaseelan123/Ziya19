@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 213 31% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 31% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 31% 14%;
+
+    /* Light blue primary theme */
+    --primary: 210 82% 46%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 210 82% 56%;
+    --primary-lighter: 210 82% 66%;
+    --primary-dark: 210 82% 36%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 213 31% 14%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 82% 95%;
+    --accent-foreground: 213 31% 14%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 82% 46%;
+
+    --radius: 0.75rem;
+
+    /* Beautiful gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 82% 46%), hsl(210 82% 56%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 82% 46%), hsl(210 82% 36%), hsl(220 82% 46%));
+    --gradient-light: linear-gradient(135deg, hsl(210 82% 95%), hsl(210 82% 90%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(210 82% 46% / 0.25);
+    --shadow-glow: 0 0 50px hsl(210 82% 56% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 213 31% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 213 31% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 213 31% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 82% 56%;
+    --primary-foreground: 213 31% 8%;
+    --primary-light: 210 82% 66%;
+    --primary-lighter: 210 82% 76%;
+    --primary-dark: 210 82% 46%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 210 82% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 82% 56%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 82% 56%), hsl(210 82% 66%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 82% 56%), hsl(210 82% 46%), hsl(220 82% 56%));
+    --gradient-light: linear-gradient(135deg, hsl(210 82% 20%), hsl(210 82% 15%));
+    
+    --shadow-elegant: 0 10px 40px -10px hsl(210 82% 56% / 0.3);
+    --shadow-glow: 0 0 50px hsl(210 82% 66% / 0.4);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .primary-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .light-gradient {
+    background: var(--gradient-light);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 20px hsl(210 82% 56% / 0.3); }
+  100% { box-shadow: 0 0 40px hsl(210 82% 56% / 0.6); }
+}
