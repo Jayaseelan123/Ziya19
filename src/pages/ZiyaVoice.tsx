@@ -25,7 +25,7 @@ const ZiyaVoice = () => {
     "Natural Voice AI Conversations",
     "Real-time Speech Processing",
     "Multi-language Voice Support",
-    "Voice clone AGS"
+    "Voice Clone AGI"
   ];
 
   const heroStats = [
@@ -78,7 +78,7 @@ const ZiyaVoice = () => {
       ]
     },
     {
-      title: "Voice clone AGS",
+      title: "Voice clone AGI",
       description:
         "Integrate AI-powered voice automation with telephony platforms for inbound and outbound calling.",
       icon: <Phone className="h-8 w-8 text-white" />,
@@ -171,6 +171,7 @@ const ZiyaVoice = () => {
         stats={heroStats}
         ctaPrimary="Get Started"
         ctaPrimaryUrl={EXTERNAL_URL}
+        showSecondary={false}
       />
 
       <FeatureSection

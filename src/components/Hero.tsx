@@ -21,6 +21,7 @@ const Hero = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
 
   const [authOpen, setAuthOpen] = useState(false);
+  const [calendlyOpen, setCalendlyOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"choice" | "login" | "register">("choice");
 
   function handleTrialSubmit(e: React.FormEvent) {
@@ -81,12 +82,15 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button variant="hero" size="xl" className="group w-full">
-                  Book a Demo
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
+              <Button
+                variant="hero"
+                size="xl"
+                className="group w-full sm:w-auto"
+                onClick={() => setCalendlyOpen(true)}
+              >
+                Book a Demo
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
 
               <Button variant="outline" size="xl" className="group" onClick={() => setDemoOpen(true)}>
                 Start Free Trial
@@ -121,7 +125,7 @@ const Hero = () => {
               {/* Floating Badge: Growth */}
               <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-4 flex items-center gap-3 animate-pulse-glow border border-primary/10">
                 <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
-                  <img src="/src/assets/ziya-ai-growth.png" alt="Growth Icon" className="w-6 h-6 object-contain" />
+                  <img src="/ziya-ai-growth.png" alt="Growth Icon" className="w-6 h-6 object-contain" />
                 </div>
                 <div>
                   <div className="text-sm font-bold text-gray-900 leading-none mb-1">62% revenue growth</div>
@@ -219,6 +223,17 @@ const Hero = () => {
               <Button type="button" variant="ghost" onClick={() => setAuthMode("register")}>New here? Register</Button>
             </form>
           )}
+        </DialogContent>
+      </Dialog>
+      <Dialog open={calendlyOpen} onOpenChange={setCalendlyOpen}>
+        <DialogContent className="sm:max-w-[500px] h-[95vh] p-0 overflow-hidden">
+          <iframe
+            src="https://calendly.com/jayaseelanravi06/30min?embed_domain=ziyasuite.com&embed_type=Inline"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            title="Select a Date & Time"
+          ></iframe>
         </DialogContent>
       </Dialog>
     </section>

@@ -161,6 +161,7 @@ const ZiyaFlow = () => {
         gradient="bg-gradient-to-br from-blue-500 to-purple-600"
         icon={<Workflow className="h-5 w-5 text-white" />}
         stats={heroStats}
+        showSecondary={false}
       />
 
       <FeatureSection

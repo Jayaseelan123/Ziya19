@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Search, Calendar, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const blogPosts = [
@@ -182,10 +183,12 @@ const Blog = () => {
                       </span>
                     </div>
 
-                    <Button variant="hero" className="group">
-                      Read Article
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <Link to="/contact">
+                      <Button variant="hero" className="group">
+                        Read Article
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -241,10 +244,12 @@ const Blog = () => {
                         </span>
                       </div>
 
-                      <Button variant="outline" size="sm" className="group">
-                        Read More
-                        <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-1 transition-transform" />
-                      </Button>
+                      <Link to="/contact">
+                        <Button variant="outline" size="sm" className="group">
+                          Read More
+                          <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </article>
@@ -253,9 +258,11 @@ const Blog = () => {
 
             {/* Load More */}
             <div className="text-center mt-12">
-              <Button variant="outline" size="lg">
-                Load More Articles
-              </Button>
+              <Link to="/contact">
+                <Button variant="outline" size="lg">
+                  Load More Articles
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -277,7 +284,9 @@ const Blog = () => {
                 className="flex-1"
                 type="email"
               />
-              <Button variant="hero">Subscribe</Button>
+              <Link to="/contact">
+                <Button variant="hero">Subscribe</Button>
+              </Link>
             </div>
 
             <p className="text-sm text-muted-foreground mt-4">

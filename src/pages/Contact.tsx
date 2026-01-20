@@ -257,16 +257,29 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Map Placeholder */}
-                <div className="mt-12">
-                  <div className="bg-gray-100 rounded-2xl h-64 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <p className="text-gray-500">Interactive Map</p>
-                      <p className="text-sm text-gray-400">
-                        Krishnagiri Office Tamil Nadu, India
-                      </p>
-                    </div>
+                {/* Maps Section */}
+                <div className="mt-12 space-y-6">
+                  <div className="overflow-hidden rounded-2xl shadow-elegant border border-border h-64">
+                    <iframe
+                      title="Krishnagiri Office"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124611.37324419992!2d78.1432426!3d12.522262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac4965ef2574eb%3A0x77d13f9f5835bc35!2sKrishnagiri%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1736484393645!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                  <div className="overflow-hidden rounded-2xl shadow-elegant border border-border h-64">
+                    <iframe
+                      title="Chennai Office"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.11675411756!2d80.04436214532292!3d13.047487770020124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d333f%3A0x6d3e707106521737!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1736484451234!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                    ></iframe>
                   </div>
                 </div>
               </div>

@@ -99,9 +99,9 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-200">
           <p>© {currentYear} ZiyaSuite. All rights reserved.</p>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white">Twitter</a>
+            <a href="https://www.instagram.com/ziyasuite_official/" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white">Instagram</a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white">LinkedIn</a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white">GitHub</a>
+            <a href="https://wa.me/919750359750" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white">WhatsApp</a>
             {/* <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white">Discord</a> */}
           </div>
         </div>

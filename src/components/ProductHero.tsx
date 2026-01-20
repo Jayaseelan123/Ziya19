@@ -102,7 +102,7 @@ const ProductHero = ({
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
+            <div className="grid grid-cols-3 gap-8 pt-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
